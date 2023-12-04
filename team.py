@@ -33,10 +33,6 @@ class Team:
             else:
                 kd = hero.kills / hero.deaths
                 print(f"{hero.name} Kill/Death:{kd}")
-
-        # for hero in self.heroes:
-        #     kd = hero.kills / hero.deaths
-        #     print(f"{hero.name} Kill/Death Ratio:{kd}")
     
     def revive_heroes(self, health=100):
         '''Reset all heroes health to starting_health'''
@@ -61,21 +57,3 @@ class Team:
                 living_opponents.remove(opponent)
             elif opponent.is_alive() and not hero.is_alive():
                 living_heroes.remove(hero)
-        
-
-        # living_heroes = list()
-        # living_opponents = list()
-        # for hero in self.heroes:
-        #     living_heroes.append(hero)
-
-        # for opponent in self.opponents:
-        #     living_opponents.append(opponent)
-
-        # while len(living_heroes) > 0 and len(living_opponents) > 0:
-        #     hero = random.choice(living_heroes)
-        #     opponent = random.choice(living_opponents)
-        #     hero.fight(opponent)
-        #     if hero.is_alive() and not opponent.is_alive():
-        #         living_opponents.remove(opponent)
-        #     elif opponent.is_alive() and not hero.is_alive():
-        #         living_heroes.remove(hero)
